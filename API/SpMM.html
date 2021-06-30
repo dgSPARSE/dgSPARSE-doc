@@ -35,6 +35,7 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -170,6 +171,32 @@
             
   <div class="section" id="spmm">
 <h1>SpMM<a class="headerlink" href="#spmm" title="Permalink to this headline">¶</a></h1>
+<p>Sparse matrix dense matrix multiplication</p>
+<div class="math notranslate nohighlight">
+\[out = S \cdot D^T\]</div>
+<p>In the above equation, S is a sparse matrix while D is a dense matrix. The outcome is an (m,k) shaped matrix.
+We provide SpMM in CSR format with two calculation methods, with and without value respectively.</p>
+<p><strong>With Value</strong></p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">spmm_cuda</span><span class="p">(</span>
+        <span class="kt">int</span> <span class="n">m</span><span class="p">,</span>          <span class="c1">//m for S&#39;s rows</span>
+        <span class="kt">int</span> <span class="n">k</span><span class="p">,</span>          <span class="c1">//k for D&#39;s rows</span>
+        <span class="kt">int</span> <span class="o">*</span><span class="n">rowptr</span><span class="p">,</span>    <span class="c1">//row pointer in CSR format</span>
+        <span class="kt">int</span> <span class="o">*</span><span class="n">colind</span><span class="p">,</span>    <span class="c1">//col indices of graph</span>
+        <span class="kt">float</span> <span class="o">*</span><span class="n">values</span><span class="p">,</span>  <span class="c1">//weights of graph</span>
+        <span class="kt">float</span> <span class="o">*</span><span class="n">dense</span><span class="p">,</span>   <span class="c1">//dense matrix</span>
+        <span class="kt">float</span> <span class="o">*</span><span class="n">out</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Without Value</strong></p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">spmm_cuda_no_edge_value</span><span class="p">(</span>
+        <span class="kt">int</span> <span class="n">m</span><span class="p">,</span>
+        <span class="kt">int</span> <span class="n">k</span><span class="p">,</span>
+        <span class="kt">int</span> <span class="o">*</span><span class="n">rowptr</span><span class="p">,</span>
+        <span class="kt">int</span> <span class="o">*</span><span class="n">colind</span><span class="p">,</span>
+        <span class="kt">float</span> <span class="o">*</span><span class="n">dense</span><span class="p">,</span>
+        <span class="kt">float</span> <span class="o">*</span><span class="n">out</span><span class="p">);</span>
+</pre></div>
+</div>
 </div>
 
 

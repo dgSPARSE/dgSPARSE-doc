@@ -35,6 +35,7 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -169,6 +170,18 @@
             
   <div class="section" id="edgesoftmax">
 <h1>edgesoftmax<a class="headerlink" href="#edgesoftmax" title="Permalink to this headline">¶</a></h1>
+<p>This is a edgesoftmax forward computation. Here we further support stacked sparse value with the same pattern by using ‘head’ parameter.</p>
+<div class="math notranslate nohighlight">
+\[softmax_{ij}=\frac{exp(value_{ij})}{\Sigma_{j\in N(i)}exp(value_{ij})}\]</div>
+<p><span class="math notranslate nohighlight">\(N(i)\)</span> is the set of nodes that have an edge to i. <span class="math notranslate nohighlight">\(value_{ij}\)</span> means the value of edge point from node i to node j.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">edge_softmax_cuda</span><span class="p">(</span>
+        <span class="kt">int</span> <span class="n">m</span><span class="p">,</span>          <span class="c1">//m for S&#39;s rows</span>
+        <span class="kt">int</span> <span class="n">head</span><span class="p">,</span>       <span class="c1">//stack parameter</span>
+        <span class="kt">int</span> <span class="o">*</span><span class="n">rowptr</span><span class="p">,</span>    <span class="c1">//row pointer in CSR format</span>
+        <span class="kt">float</span> <span class="o">*</span><span class="n">values</span><span class="p">,</span>  <span class="c1">//stacked weights of multi-graph</span>
+        <span class="kt">float</span> <span class="o">*</span><span class="n">softmax</span><span class="p">);</span>
+</pre></div>
+</div>
 </div>
 
 

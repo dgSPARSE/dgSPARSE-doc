@@ -35,6 +35,7 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -170,6 +171,38 @@
             
   <div class="section" id="sddmm">
 <h1>SDDMM<a class="headerlink" href="#sddmm" title="Permalink to this headline">¶</a></h1>
+<p>Sampled dense dense matrix multiplication</p>
+<div class="math notranslate nohighlight">
+\[out = (D_1 \cdot D_2)\odot S\]</div>
+<p>In the above equation, <span class="math notranslate nohighlight">\(\odot\)</span> is a hadamard product. The sparse matrix is performed as a mask for computing dense matrix multiplication.</p>
+<div class="math notranslate nohighlight">
+\[\]</div>
+<p>out[i][j]=(Sigma_{k} D_1[i][k]cdot D_2[j][k])cdot S[i][j]</p>
+<p>We provide SDDMM in both coo and csr format.
+Note that D2 is a transposed matrix.</p>
+<p><strong>COO</strong></p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">sddmm_cuda_coo</span><span class="p">(</span>
+        <span class="kt">int</span> <span class="n">k</span><span class="p">,</span>          <span class="c1">//cols for D1</span>
+        <span class="kt">int</span> <span class="n">nnz</span><span class="p">,</span>        <span class="c1">//non zeros number for graph</span>
+        <span class="kt">int</span> <span class="o">*</span><span class="n">rowind</span><span class="p">,</span>    <span class="c1">//row indices of graph</span>
+        <span class="kt">int</span> <span class="o">*</span><span class="n">colind</span><span class="p">,</span>    <span class="c1">//col indices of graph</span>
+        <span class="kt">float</span> <span class="o">*</span><span class="n">D1</span><span class="p">,</span>      <span class="c1">//left hand Dense matrix</span>
+        <span class="kt">float</span> <span class="o">*</span><span class="n">D2</span><span class="p">,</span>      <span class="c1">//right hand Dense matrix</span>
+        <span class="kt">float</span> <span class="o">*</span><span class="n">out</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>CSR</strong></p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">sddmm_cuda_csr</span><span class="p">(</span>
+        <span class="kt">int</span> <span class="n">m</span><span class="p">,</span>          <span class="c1">//m for S&#39;s rows</span>
+        <span class="kt">int</span> <span class="n">k</span><span class="p">,</span>          <span class="c1">//k for D1&#39;s rows</span>
+        <span class="kt">int</span> <span class="n">nnz</span><span class="p">,</span>        <span class="c1">//non zeros number for graph</span>
+        <span class="kt">int</span> <span class="o">*</span><span class="n">rowptr</span><span class="p">,</span>    <span class="c1">//row pointer in CSR format</span>
+        <span class="kt">int</span> <span class="o">*</span><span class="n">colind</span><span class="p">,</span>    <span class="c1">//col indices of graph</span>
+        <span class="kt">float</span> <span class="o">*</span><span class="n">D1</span><span class="p">,</span>      <span class="c1">//left hand Dense matrix</span>
+        <span class="kt">float</span> <span class="o">*</span><span class="n">D2</span><span class="p">,</span>      <span class="c1">//right hand Dense matrix</span>
+        <span class="kt">float</span> <span class="o">*</span><span class="n">out</span><span class="p">);</span>
+</pre></div>
+</div>
 </div>
 
 

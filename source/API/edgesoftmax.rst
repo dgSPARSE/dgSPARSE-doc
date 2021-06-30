@@ -11,7 +11,8 @@ This is a edgesoftmax forward computation. Here we further support stacked spars
 
 :math:`N(i)` is the set of nodes that have an edge to i. :math:`value_{ij}` means the value of edge point from node i to node j.
 
-.. code-block:: c+
+.. code-block:: c++
+    
     void edge_softmax_cuda(
             int m,          //m for S's rows
             int head,       //stack parameter
