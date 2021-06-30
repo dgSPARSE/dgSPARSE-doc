@@ -176,8 +176,7 @@
 \[out = (D_1 \cdot D_2)\odot S\]</div>
 <p>In the above equation, <span class="math notranslate nohighlight">\(\odot\)</span> is a hadamard product. The sparse matrix is performed as a mask for computing dense matrix multiplication.</p>
 <div class="math notranslate nohighlight">
-\[\]</div>
-<p>out[i][j]=(Sigma_{k} D_1[i][k]cdot D_2[j][k])cdot S[i][j]</p>
+\[out[i][j]=(\Sigma_{k} D_1[i][k]\cdot D_2[j][k])\cdot S[i][j]\]</div>
 <p>We provide SDDMM in both coo and csr format.
 Note that D2 is a transposed matrix.</p>
 <p><strong>COO</strong></p>

@@ -6,6 +6,7 @@
 =====================================
 Welcome to dgSparse's documentation!
 =====================================
+
 dgSparse is a high-performance sparse matrix library.
 
 .. toctree::
