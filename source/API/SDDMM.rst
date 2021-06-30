@@ -12,7 +12,7 @@ In the above equation, :math:`\odot` is a hadamard product. The sparse matrix is
 
 .. math::
 
-out[i][j]=(\Sigma_{k} D_1[i][k]\cdot D_2[j][k])\cdot S[i][j]
+    out[i][j]=(\Sigma_{k} D_1[i][k]\cdot D_2[j][k])\cdot S[i][j]
 
 We provide SDDMM in both coo and csr format.
 Note that D2 is a transposed matrix.

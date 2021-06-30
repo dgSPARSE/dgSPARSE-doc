@@ -6,7 +6,7 @@
 =====================================
 Welcome to dgSparse's documentation!
 =====================================
-
+dgSparse is a high-performance sparse matrix library.
 
 .. toctree::
    :maxdepth: 1
@@ -22,7 +22,3 @@ Welcome to dgSparse's documentation!
    :glob:
    
    API/index
-
-====================
-Indices and tables
-====================
