@@ -4,10 +4,10 @@
    contain the root `toctree` directive.
 
 =====================================
-Welcome to dgSparse's documentation!
+Welcome to dgSPARSE Library's documentation!
 =====================================
 
-dgSparse is a high-performance sparse matrix library.
+The dgSPARSE Library (Deep Graph Sparse Library) is a high performance library for sparse kernel acceleration on GPUs based on CUDA.
 
 .. toctree::
    :maxdepth: 1
