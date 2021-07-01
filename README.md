@@ -3,6 +3,6 @@ The dgSPARSE Library (Deep Graph Sparse Library) is a high performance library f
 
 # References
 
-1. [dgSPARSE Library Repository](url=https://github.com/dgSPARSE/dgSPARSE-Library)
+1. [dgSPARSE Library Repository](https://github.com/dgSPARSE/dgSPARSE-Library)
 
-2. [dgSPARSE Wrapper Repository](url=https://github.com/dgSPARSE/dgSPARSE-Wrapper)
+2. [dgSPARSE Wrapper Repository](https://github.com/dgSPARSE/dgSPARSE-Wrapper)
