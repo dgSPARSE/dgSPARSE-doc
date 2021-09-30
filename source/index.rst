@@ -23,3 +23,11 @@ The dgSPARSE Library (Deep Graph Sparse Library) is a high performance library f
    :glob:
    
    API/index
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Message Passing API reference
+   :hidden:
+   :glob:
+   
+   MSGAPI/index
