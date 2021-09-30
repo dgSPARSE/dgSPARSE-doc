@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>installation &mdash; dgSparse v0.1 documentation</title>
+  <title>Message passing API reference &mdash; dgSparse v0.1 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -18,8 +18,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="API" href="../API/index.html" />
-    <link rel="prev" title="Welcome to dgSPARSE Library’s documentation!" href="../index.html" /> 
+    <link rel="next" title="GeSpMM" href="GeSpMM.html" />
+    <link rel="prev" title="edgesoftmax" href="../API/edgesoftmax.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -38,16 +38,19 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Get Started</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">installation</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">installation</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API reference</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../API/index.html">API</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Message Passing API reference</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../MSGAPI/index.html">Message passing API reference</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Message passing API reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="GeSpMM.html">GeSpMM</a></li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -64,9 +67,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>installation</li>
+      <li>Message passing API reference</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/installation/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/MSGAPI/index.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -74,16 +77,39 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="installation">
-<h1>installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h1>
+  <section id="message-passing-api-reference">
+<h1>Message passing API reference<a class="headerlink" href="#message-passing-api-reference" title="Permalink to this headline"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="GeSpMM.html">GeSpMM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="u_add_e_sum.html">u add e sum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="u_add_e_max.html">u add e sum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="u_add_e_min.html">u add e min</a></li>
+<li class="toctree-l2"><a class="reference internal" href="u_add_e_mean.html">u add e mean</a></li>
+<li class="toctree-l2"><a class="reference internal" href="u_div_e_sum.html">u div e sum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="u_div_e_max.html">u div e max</a></li>
+<li class="toctree-l2"><a class="reference internal" href="u_div_e_min.html">u div e min</a></li>
+<li class="toctree-l2"><a class="reference internal" href="u_div_e_mean.html">u div e mean</a></li>
+<li class="toctree-l2"><a class="reference internal" href="u_mul_e_sum.html">u mul e sum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="u_mul_e_max.html">u mul e max</a></li>
+<li class="toctree-l2"><a class="reference internal" href="u_mul_e_min.html">u mul e min</a></li>
+<li class="toctree-l2"><a class="reference internal" href="u_mul_e_mean.html">u mul e mean</a></li>
+<li class="toctree-l2"><a class="reference internal" href="u_sub_e_sum.html">u sub e sum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="u_sub_e_max.html">u sub e max</a></li>
+<li class="toctree-l2"><a class="reference internal" href="u_sub_e_min.html">u sub e min</a></li>
+<li class="toctree-l2"><a class="reference internal" href="u_sub_e_mean.html">u sub e mean</a></li>
+</ul>
+</li>
+</ul>
+</div>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to dgSPARSE Library’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../API/index.html" class="btn btn-neutral float-right" title="API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../API/edgesoftmax.html" class="btn btn-neutral float-left" title="edgesoftmax" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="GeSpMM.html" class="btn btn-neutral float-right" title="GeSpMM" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
