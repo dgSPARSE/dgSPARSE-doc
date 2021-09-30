@@ -50,7 +50,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Message passing API reference</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="GeSpMM.html">GeSpMM</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="u_add_e_sum.html">u add e sum</a></li>
-<li class="toctree-l3"><a class="reference internal" href="u_add_e_max.html">u add e sum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="u_add_e_max.html">u add e max</a></li>
 <li class="toctree-l3"><a class="reference internal" href="u_add_e_min.html">u add e min</a></li>
 <li class="toctree-l3"><a class="reference internal" href="u_add_e_mean.html">u add e mean</a></li>
 <li class="toctree-l3"><a class="reference internal" href="u_div_e_sum.html">u div e sum</a></li>
@@ -101,7 +101,7 @@
 <h1>u sub e sum<a class="headerlink" href="#u-sub-e-sum" title="Permalink to this headline"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="u_sub_e_sum">
-<span class="sig-name descname"><span class="pre">u_sub_e_sum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rowptr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colind</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feat</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#u_sub_e_sum" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">u_sub_e_sum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rowptr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colind</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feat</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#u_sub_e_sum" title="Permalink to this definition"></a></dt>
 <dd><p>Generalized SpMM function. It fuses two steps into one kernel.</p>
 <blockquote>
 <div><p>1.Computes messages by sub source node and edge features.</p>

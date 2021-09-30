@@ -2,7 +2,7 @@
 u mul e min
 ==============
 
-.. py:function:: u_mul_e_min(rowptr, colind, weight, data, feat)
+.. py:function:: u_mul_e_min(rowptr, colind, weight, feat)
 
    Generalized SpMM function. It fuses two steps into one kernel.
 

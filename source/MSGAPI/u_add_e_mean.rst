@@ -2,7 +2,7 @@
 u add e mean
 ==============
 
-.. py:function:: u_add_e_mean(rowptr, colind, weight, data, feat)
+.. py:function:: u_add_e_mean(rowptr, colind, weight, feat)
 
    Generalized SpMM function. It fuses two steps into one kernel.
 

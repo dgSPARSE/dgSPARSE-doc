@@ -2,7 +2,7 @@
 u div e min
 ==============
 
-.. py:function:: u_div_e_min(rowptr, colind, weight, data, feat)
+.. py:function:: u_div_e_min(rowptr, colind, weight, feat)
 
    Generalized SpMM function. It fuses two steps into one kernel.
 

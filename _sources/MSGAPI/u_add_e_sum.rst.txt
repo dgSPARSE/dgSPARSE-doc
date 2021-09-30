@@ -2,7 +2,7 @@
 u add e sum
 ==============
 
-.. py:function:: u_add_e_sum(rowptr, colind, weight, data, feat)
+.. py:function:: u_add_e_sum(rowptr, colind, weight, feat)
 
    Generalized SpMM function. It fuses two steps into one kernel.
 
