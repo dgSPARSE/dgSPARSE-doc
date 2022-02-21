@@ -22,7 +22,7 @@ copyright = '2021, dgSparse'
 author = 'dgSparse'
 
 # The full version, including alpha/beta/rc tags
-release = 'v0.1'
+release = 'v0.2'
 
 
 # -- General configuration ---------------------------------------------------

@@ -3,9 +3,9 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-=====================================
+===============================================
 Welcome to dgSPARSE Library's documentation!
-=====================================
+===============================================
 
 The dgSPARSE Library (Deep Graph Sparse Library) is a high performance library for sparse kernel acceleration on GPUs based on CUDA.
 
