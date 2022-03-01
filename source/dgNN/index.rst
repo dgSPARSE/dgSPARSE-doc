@@ -1,5 +1,5 @@
 ==============
-Sparse Kernel
+Conv layers
 ==============
 
 .. toctree::
@@ -8,7 +8,6 @@ Sparse Kernel
     :hidden:
     :glob:
 
-    SpMM
-    SDDMM
-    edgesoftmax
-    GSpMM
+    EdgeConv
+    GATConv
+    GMMConv
