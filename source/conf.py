@@ -31,9 +31,10 @@ release = 'v0.2'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'recommonmark',
+
     'sphinx_markdown_tables',
-    'sphinx.ext.autodoc'
+    'sphinx.ext.autodoc',
+    'sphinx.ext.mathjax'
 ]
 source_suffix = {
     '.rst': 'restructuredtext',
