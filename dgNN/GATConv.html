@@ -1,74 +1,35 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>GATConv &mdash; dgSparse v0.2 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="GMMConv" href="GMMConv.html" />
     <link rel="prev" title="EdgeConv" href="EdgeConv.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../index.html" class="icon icon-home"> dgSparse
-          
-
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -76,27 +37,16 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Get Started</span></p>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Get Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">installation</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Sparse Kernel reference</span></p>
+<p class="caption" role="heading"><span class="caption-text">Sparse Kernel reference</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../API/index.html">Sparse Kernel</a></li>
 </ul>
-<p class="caption"><span class="caption-text">dgNN</span></p>
+<p class="caption" role="heading"><span class="caption-text">dgNN</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Conv layers</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="EdgeConv.html">EdgeConv</a></li>
@@ -106,155 +56,108 @@
 </li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">dgSparse</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="index.html">Conv layers</a> &raquo;</li>
-        
       <li>GATConv</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/dgNN/GATConv.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="gatconv">
-<h1>GATConv<a class="headerlink" href="#gatconv" title="Permalink to this headline">¶</a></h1>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">dgNN</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">GATConv</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
-                         <span class="n">in_feats</span><span class="p">,</span>
-                         <span class="n">out_feats</span><span class="p">,</span>
-                         <span class="n">num_heads</span><span class="p">,</span>
-                         <span class="n">feat_drop</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span>
-                         <span class="n">attn_drop</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span>
-                         <span class="n">negative_slope</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
-                         <span class="n">residual</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-                         <span class="n">activation</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                         <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><dl class="simple">
-<dt><strong>Parameters</strong>:</dt><dd><ul>
-<li><p>in_feats: input feature size</p></li>
-<li><p>out_feats: output feature size</p></li>
-<li><p>num_heads: number of heads in multi-head attention</p></li>
-<li><p>feat_drop: dropout rate on node features</p></li>
-<li><p>attn_drop: dropout rate on attention weights</p></li>
-<li><p>negative_slope: negative slope for LeakyReLU</p></li>
-<li><p>residual: whether to use residual connection</p></li>
-<li><p>activation: applies an activation function to the updated node features</p></li>
-<li><p>bias: whether to learn a bias term</p></li>
+             
+  <section id="gatconv">
+<h1>GATConv<a class="headerlink" href="#gatconv" title="Permalink to this headline"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">class</span> <span class="pre">dgNN.layers.GATConv(self,</span> <span class="pre">in_feats,</span> <span class="pre">out_feats,</span> <span class="pre">num_heads,</span> <span class="pre">feat_drop=0.,</span> <span class="pre">attn_drop=0.,</span> <span class="pre">negative_slope=0.2,</span> <span class="pre">residual=False,</span> <span class="pre">activation=None,</span> <span class="pre">bias=True)</span></span></dt>
+<dd><p>Graph attention layer from <a class="reference external" href="https://arxiv.org/pdf/1710.10903.pdf">Graph Attention Network</a></p>
+<div class="math notranslate nohighlight">
+\[h_{i}^{(l+1)}=\sum_{j \in \mathcal{N}(i)} \alpha_{i, j} W^{(l)} h_{j}^{(l)}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>in_feats</strong> (<em>int</em>) – input feature size.</p></li>
+<li><p><strong>out_feats</strong> (<em>int</em>) – output feature size.</p></li>
+<li><p><strong>num_heads</strong> (<em>int</em>) – number of heads in multi-head attention.</p></li>
+<li><p><strong>feat_drop</strong> (<em>float</em>) – dropout rate on node features.</p></li>
+<li><p><strong>attn_drop</strong> (<em>float</em>) – dropout rate on attention weights.</p></li>
+<li><p><strong>negative_slope</strong> (<em>float</em>) – negative slope for LeakyReLU.</p></li>
+<li><p><strong>residual</strong> (<em>bool</em>) – whether to use residual connection.</p></li>
+<li><p><strong>bias</strong> (<em>bool</em>) – whether to learn a bias term.</p></li>
 </ul>
 </dd>
 </dl>
-</li>
+<dl class="py function">
+<dt class="sig sig-object py" id="forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row_ptr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col_ind</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col_ptr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row_ind</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feat</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#forward" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>row_ptr</strong> (<em>torch.tensor</em>) – CSR format index pointer tensor of shape <span class="math notranslate nohighlight">\((V+1)\)</span>, where <span class="math notranslate nohighlight">\(V\)</span> is the number of vertices.</p></li>
+<li><p><strong>col_ind</strong> (<em>torch.tensor</em>) – CSR format index tensor of shape <span class="math notranslate nohighlight">\((E)\)</span>, where <span class="math notranslate nohighlight">\(E\)</span> is the number of edges.</p></li>
+<li><p><strong>col_ptr</strong> (<em>torch.tensor</em>) – CSC format index pointer tensor of shape <span class="math notranslate nohighlight">\((N+1)\)</span>.</p></li>
+<li><p><strong>row_ind</strong> (<em>torch.tensor</em>) – CSC format index tensor of shape <span class="math notranslate nohighlight">\((E)\)</span>.</p></li>
+<li><p><strong>feat</strong> (<em>torch.tensor</em>) – the input feature of shape <span class="math notranslate nohighlight">\((N,F_{in})\)</span>, where <span class="math notranslate nohighlight">\(F_{in}\)</span> is the input feature size.</p></li>
 </ul>
-<p>Graph attention layer from <a class="reference external" href="https://arxiv.org/pdf/1710.10903.pdf">Graph Attention Network</a></p>
-<div class="math notranslate nohighlight">
-\[h_{i}^{(l+1)}=\sum_{j \in \mathcal{N}(i)} \alpha_{i, j} W^{(l)} h_{j}^{(l)}\]</div>
-</div>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the output feature of shape <span class="math notranslate nohighlight">\((N, H, F_{out})\)</span>, where <span class="math notranslate nohighlight">\(F_{out}\)</span> is the output feature size and <span class="math notranslate nohighlight">\(H\)</span> is the number of attention heads.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>torch.tensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="GMMConv.html" class="btn btn-neutral float-right" title="GMMConv" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="EdgeConv.html" class="btn btn-neutral float-left" title="EdgeConv" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="GMMConv.html" class="btn btn-neutral float-right" title="GMMConv" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2021, dgSparse.
-
-    </p>
+    <p>&#169; Copyright 2021, dgSparse.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
